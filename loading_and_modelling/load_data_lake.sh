@@ -1,11 +1,3 @@
-# Launching an aws instance 
-chmod 400 Pera.pem
-ssh -i "Pera.pem" root@ec2-54-164-47-242.compute-1.amazonaws.com
-
-# Mounting the volume
-fdisk -­l
-mount -t ext4 /dev/xvdf/data
-
 # Starting HDFS and postgres
 /root/start‐hadoop.sh
 /data/start_postgres.sh
