@@ -1,0 +1,53 @@
+Investigating the best hospitals
+
+To evaluate the best hospitals, I used a joint approach of looking at quality scores from the effective care table and quality scores from the readmissions table. The top scoring hospital based on average overall effective care quality score was Falls Community Hospital and Clinic, and the top scoring hospital based on average readmission score was Maricopa Medical center. 
+
+I dug a little deeper into these quality scores and evaluated hospitals on their average score for each medical procedure. The top scoring procedure across all hospitals was the median time from emergency room arrival to emergency room departure for admitted emergency room patients. The top scoring hospital overall for this procedure was again Falls Community hospital and clinic. The lowest scoring measure across all hospitals was patients leaving without being seen. The hospital that had the highest score for this procedure was Memorial Herman Baptist Orange hospital. 
+
+Based on these results, it appears that Falls Community Hospital and Clinic is the best hospital when it comes to quality scores. It was the top scoring hospital overall, and it was also top scoring for a procedure in which all of the other hospitals also score highly. It was not in the top 10 for readmissions scores, however, so that may be an area of improvement for this hospital to explore. 
+
+My approach is robust, as it investigates hospitals based on overall quality and readmission quality. I also investigated quality scores for specific procedures and evaluated how hospitals stack up against each other on the highest scoring and lowest scoring overall procedures. 
+
+See below for query results; queries are in the same order as found in the best_hospitals.sql file. 
+
+Query 1: top 10 hospitals on average effective care score
+FALLS COMMUNITY HOSPITAL AND CLINIC     235.58333333333334                      
+BEAR VALLEY COMMUNITY HOSPITAL	175.33333333333334
+HOSP COMUNITARIO BUEN SAMARITANO	167.25
+MEDINA REGIONAL HOSPITAL	136.0
+NEWARK BETH ISRAEL MEDICAL CENTER	134.81578947368422
+REDWOOD MEMORIAL HOSPITAL	130.33333333333334
+HOSPITAL HERMANOS MELENDEZ INC	130.21052631578948
+MERCY HOSPITAL CASSVILLE	128.0
+COMMUNITY MEMORIAL HOSPITAL, INC	127.66666666666667
+BOONE MEMORIAL HOSPITAL	125.33333333333333
+
+Query 2: top 10 hospitals on average readmission score
+MARICOPA MEDICAL CENTER 19.25                                                   
+HOSPITAL METROPOLITANO DR TITO MATTEI	19.200000000000003
+HOUSTON COUNTY COMMUNITY HOSPITAL	19.2
+UNIVERSITY HOSPITAL & CLINICS	19.15
+MITCHELL COUNTY HOSPITAL	18.45
+MAYO CLINIC HEALTH SYSTEM - WASECA	18.4
+HOSPITAL PEREA	18.375
+MOUNDVIEW MEMORIAL HOSPITAL AND CLINICS	18.2
+WELLMONT HANCOCK COUNTY HOSPITAL	18.1
+UNION COUNTY GENERAL HOSPITAL	17.875
+
+QUERY 3: Top 3 scoring measures across hospitals
+Median Time from ED Arrival to ED Departure for Admitted ED Patients    271.6069397042093
+Median Time from ED Arrival to ED Departure for Discharged ED Patients	142.76739325171692
+Relievers for Inpatient Asthma	99.97938144329896
+HIGHEST SCORE: ED_1b
+
+QUERY 4: Bottom 3 scoring measures across hospitals
+Patient left without being seen	1.6996257018091079
+Elective Delivery	4.232539682539683
+Hospital Acquired Potentially-Preventable Venous Thromboembolism	6.347262247838617
+LOWEST SCORE: OP_22
+
+Query 5: Top scoring hospital for top scoring procedure
+FALLS COMMUNITY HOSPITAL AND CLINIC     ED_1b   1180.0
+
+Query 6: Top scoring hospital for bottom scoring procedure
+MEMORIAL HERMANN BAPTIST ORANGE HOSPITAL        OP_22   17.0
