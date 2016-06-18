@@ -1,0 +1,35 @@
+Best states
+
+The state with the highest average quality care score was Washington DC, with an average score of 100.98. Maryland was a close second with an average score of 100.37. However, DC only has 9 hospitals, whereas Maryland has 46. With five times as many hospitals and essentially the same average quality score, Maryland demonstrates consistently high quality care with a much larger population. Therefore, I would conclude that Maryland is the best state for high quality care.
+
+Additionally, it is worth giving honorable mentions to New York and California for having hundreds of hospitals and remaining in the top 10 for average quality care scores. Both have average scores above 95, with New York having 179 hospitals and California having 343. 
+
+The lowest performing state that provided data is Guam, with an average score of 79.88 for its one hospital. Kansas is second from the bottom with 133 hospitals and an average quality score of 83.90, making it the state with consistently low scores. 
+
+In evaluating average scores across states, I felt that it was important to include the number of providers in that state along with the quality scores. This adds another dimension to the analysis that makes it possible to differentiate further between states. This allows me to conclude that Maryland is the best state for overall high quality care and Kansas is the worst state for overall quality care, even though DC and Guam are the absolute highest and lowest (respectively). 
+
+Query 1: top 10 states on average quality score from effective care, as well as the number of distinct hospitals in that area 
+DC      100.98529411764706      9                                               
+MD	100.37987987987988	46
+DE	99.98744769874477	7
+NY	96.80901713255184	179
+NJ	96.39256535947712	65
+NV	96.01920768307323	35
+NH	95.55102040816327	26
+VI	95.45833333333333	2
+CA	95.29843735020611	343
+CT	95.15523809523809	31
+
+Query 1: bottom 10 states on average quality score from effective care, as well as the number of distinct hospitals in the state
+AS      NULL    1                                                               
+MP	NULL	1
+GU	79.88888888888889	1
+KS	83.89928909952607	133
+MS	84.23081201334817	99
+ND	84.6221590909091	45
+OK	84.89770264412657	127
+MN	86.06470588235294	132
+WY	86.24700239808153	28
+UT	87.11685823754789	46
+
+
