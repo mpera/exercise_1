@@ -1,0 +1,100 @@
+Investigating procedures with the greatest variability between hospitals
+
+The procedure with the greatest variance in average quality score between hospitals was the median time from ED arrival to ED departure for patients admitted to ED. The second and third procedures with the greatest variance also had to do with times in the ED for patients (decision time to departure time, and time from arrival to departure). This indicates that ED procedures need to be assessed at the hospitals with the lowest average scores; they can perhaps learn from the hospitals with the highest average scores and change their procedures accordingly. 
+
+The two procedures with the least variance in average quality score had to do with asthma care. This indicates that all hospitals either do really well, really poorly, or somewhere in the middle for asthma care. To investigate further, I performed a query to determine the highest average performing procedures overall. Systemic corticosteroids for inpatient asthma and relievers for inpatient asthma where the 3rd and 4th highest procedures. This indicates that all hospitals overall perform highly on these metrics.
+
+These analyses show variance in hospitals when it comes to average scores for each procedure, so I feel confident in my analysis of the procedures with the greatest (and least) variability between hospitals. It would also be interesting to perform some ANOVA statistical tests on these to determine if the differences between hospitals were statistically significant. 
+
+
+Query 1: Variance in average quality score for each procedure between hospitals, listed in descending order (highest variance procedures listed first)
+
+Median Time from ED Arrival to ED Departure for Admitted ED Patients	8617.740839212534
+Admit Decision Time to ED Departure Time for Admitted Patients	3864.6924460743576
+Median Time from ED Arrival to ED Departure for Discharged ED Patients	1656.5529409803191
+Median Time to Transfer to Another Facility for Acute Coronary Intervention- Reporting Rate	869.0306968514059
+Thrombolytic Therapy	481.9866588294434
+Head CT Scan Results for Acute Ischemic Stroke or Hemorrhagic Stroke Patients who Received Head CT or MRI Scan Interpretation Within 45 Minutes of ED Arrival	477.18888614639275
+Fibrinolytic Therapy Received within 30 Minutes of Hospital Arrival	352.6666666666667
+Fibrinolytic Therapy Received Within 30 Minutes of ED Arrival	325.7463235294118
+Median Time to Pain Management for Long Bone Fracture	314.0819735739419
+Median Time from ED Arrival to Provider Contact for ED patients	285.003712670175
+Venous Thromboembolism Warfarin Therapy Discharge Instructions	265.7879612689099
+Venous Thromboembolism Prophylaxis	232.7882896170078
+Stroke Education	196.37153240873724
+Home Management Plan of Care (HMPC) Document Given to Patient/Caregiver	161.77604166666666
+Influenza Immunization	142.6802996912545
+Discharge Instructions	139.9011388469526
+Evaluation of LVS Function	108.40606462202848
+Discharged on Statin Medication	100.74762297044252
+Initial Antibiotic Selection for CAP in Immunocompetent Patient	86.04221827311714
+Venous Thromboembolism (VTE) Prophylaxis	80.29629988698395
+Hospital Acquired Potentially-Preventable Venous Thromboembolism	65.00332823958338
+Venous Thromboembolism Patients with Anticoagulation Overlap Therapy	63.514327147053216
+Median Time to Fibrinolysis	57.20588235294117
+Intensive Care Unit Venous Thromboembolism Prophylaxis	55.92415390473582
+Elective Delivery	48.41735386747281
+Primary PCI Received Within 90 Minutes of Hospital Arrival	44.816765919245626
+ACEI or ARB for LVSD	41.7426373670045
+Anticoagulation Therapy for Atrial Fibrillation/Flutter	38.76581274329653
+Median Time to ECG	37.32454597926684
+Assessed for Rehabilitation	32.13643209706773
+Statin Prescribed at Discharge	31.59522440835669
+Venous Thromboembolism Patients Receiving Unfractionated Heparin with Dosages/Platelet Count Monitoring by Protocol or Nomogram	31.25548890788549
+Antithrombotic Therapy By End of Hospital Day 2	28.84502387981481
+Aspirin at Arrival	27.104502764162397
+Timing of Antibiotic Prophylaxis	25.695019345256913
+Surgery Patients Who Received Appropriate Venous Thromboembolism Prophylaxis Within 24 Hours Prior to Surgery to 24 Hours After Surgery	22.018134656657445
+Prophylactic Antibiotic Selection for Surgical Patients	15.333263105383388
+Discharged on Antithrombotic Therapy	15.071783078600248
+Aspirin Prescribed at Discharge	14.485360560345828
+Patient left without being seen	2.9468931849164655
+Systemic Corticosteroids for Inpatient Asthma	1.64714634924009
+Relievers for Inpatient Asthma	0.020193431820597303
+Emergency Department Volume	NULL
+
+Query 2: Highest average procedures overall
+Median Time from ED Arrival to ED Departure for Admitted ED Patients	271.6069397042093
+Median Time from ED Arrival to ED Departure for Discharged ED Patients	142.76739325171692
+Relievers for Inpatient Asthma	99.97938144329896
+Systemic Corticosteroids for Inpatient Asthma	99.65979381443299
+Surgery Patients Who Received Appropriate Venous Thromboembolism Prophylaxis Within 24 Hours Prior to Surgery to 24 Hours After Surgery	98.85677749360613
+Venous Thromboembolism Patients Receiving Unfractionated Heparin with Dosages/Platelet Count Monitoring by Protocol or Nomogram	98.8078239608802
+Aspirin Prescribed at Discharge	98.66289080199365
+Discharged on Antithrombotic Therapy	98.60119715675272
+Admit Decision Time to ED Departure Time for Admitted Patients	98.51859267734554
+Antithrombotic Therapy By End of Hospital Day 2	97.76672897196262
+Prophylactic Antibiotic Selection for Surgical Patients	97.61324639670556
+Statin Prescribed at Discharge	97.59232175502743
+Assessed for Rehabilitation	97.21539600296077
+Timing of Antibiotic Prophylaxis	97.19284977655552
+Evaluation of LVS Function	96.7862999206559
+Aspirin at Arrival	96.5778629611883
+ACEI or ARB for LVSD	96.47399702823179
+Anticoagulation Therapy for Atrial Fibrillation/Flutter	96.4076050700467
+Primary PCI Received Within 90 Minutes of Hospital Arrival	95.44895287958116
+Intensive Care Unit Venous Thromboembolism Prophylaxis	94.81049069373942
+Venous Thromboembolism (VTE) Prophylaxis	94.5490774907749
+Venous Thromboembolism Patients with Anticoagulation Overlap Therapy	94.33645911477869
+Initial Antibiotic Selection for CAP in Immunocompetent Patient	94.21998489806192
+Discharged on Statin Medication	93.86134779240899
+Discharge Instructions	93.61008861622359
+Influenza Immunization	91.74645627173041
+Stroke Education	90.53962900505903
+Home Management Plan of Care (HMPC) Document Given to Patient/Caregiver	89.375
+Venous Thromboembolism Prophylaxis	89.11431805319751
+Venous Thromboembolism Warfarin Therapy Discharge Instructions	88.8820907617504
+Thrombolytic Therapy	82.90045766590389
+Fibrinolytic Therapy Received Within 30 Minutes of ED Arrival	70.25
+Head CT Scan Results for Acute Ischemic Stroke or Hemorrhagic Stroke Patients who Received Head CT or MRI Scan Interpretation Within 45 Minutes of ED Arrival	66.71324296141815
+Median Time to Transfer to Another Facility for Acute Coronary Intervention- Reporting Rate	60.74572127139364
+Median Time to Pain Management for Long Bone Fracture	55.35687263556116
+Fibrinolytic Therapy Received within 30 Minutes of Hospital Arrival	50.0
+Median Time from ED Arrival to Provider Contact for ED patients	28.081991651759093
+Median Time to Fibrinolysis	26.0
+Median Time to ECG	8.333015721772272
+Hospital Acquired Potentially-Preventable Venous Thromboembolism	6.347262247838617
+Elective Delivery	4.232539682539683
+Patient left without being seen	1.6996257018091079
+Emergency Department Volume	NULL
+
