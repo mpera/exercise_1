@@ -1,0 +1,87 @@
+Investigating whether patient survey scores are correlated with hospital quality scores
+
+For patient survey responses, there were actually many hospitals tied at 80 for the highest score and 0 for the lowest score (see query results below).
+
+To evaluate if patient scores are correlated with hospital quality scores, I created a table with the average quality score for each hospital. I then performed a corr() function on the average quality score and the patient survey response score. The correlation was weakly negative (-0.218), indicating that patient survey scores and quality scores for each hospital were actually inversely related; that is, as patient survey scores increase, hospital quality scores decrease. However, it is unclear what value this correlation coefficient actually gives. The coefficient did not come with a p-value, so it is hard to say whether it is statistically significant. Additionally, a weak correlation like -0.218 is not very practically significant. 
+
+What this finding suggests is that patient perceptions of hospitals capture different information than quality scores from more “official” measures. For example, Falls Community Hospital had an average quality score that was far and above the best quality score for all the hospitals, but their patient rating was only 62. Perhaps the staff at a certain hospital is very effective in terms of providing consistent and quality care, but they are non-communicative with patients; or, hospital procedures are inefficient and make patients wait a long time for quality care. This indicates that hospitals should take into account both their quality scores and patient survey scores in order to provide care that is both effective and valuable for patients. 
+
+
+Query 1: highest rated hospitals on patient survey base_score
+PHYSICIANS' SPECIALTY HOSPITAL	80	20
+BAYLOR MEDICAL CENTER AT UPTOWN	80	20
+PHYSICIAN'S CARE SURGICAL HOSPITAL	80	20
+ADVANCED SURGICAL HOSPITAL	80	20
+QUAIL CREEK SURGICAL HOSPITAL	80	20
+PHYSICIANS CENTRE,THE	80	20
+SURGICAL INSTITUTE OF READING	80	20
+FAIRWAY MEDICAL CENTER	80	20
+HEART HOSPITAL OF LAFAYETTE	80	20
+OUACHITA COMMUNITY HOSPITAL	80	20
+LAFAYETTE SURGICAL SPECIALTY HOSPITAL	80	20
+PHYSICIANS MEDICAL CENTER	80	20
+MIDWEST SURGICAL HOSPITAL LLC	80	20
+WESTLAKE REGIONAL HOSPITAL	80	20
+MANHATTAN SURGICAL HOSPITAL LLC	80	20
+NORTHSIDE MEDICAL CENTER	80	20
+SURGICAL HOSPITAL AT SOUTHWOODS	80	20
+DAKOTA PLAINS SURGICAL CENTER LLP	80	20
+BLACK HILLS SURGICAL HOSPITAL LLP	80	20
+SACRED HEART HOSPITAL ON THE GULF	80	20
+NORTH CENTRAL SURGICAL CENTER LLP	80	20
+ORTHOPAEDIC HOSPITAL OF WISCONSIN	80	20
+FAYETTE MEDICAL CENTER	80	20
+
+Query 1: 10 lowest rated hospitals on base_score
+HILLCREST MEDICAL CENTER	0	13
+LAWNWOOD REGIONAL MEDICAL CENTER & HEART INSTITUTE	0	14
+BRANDON REGIONAL HOSPITAL	0	13
+HUTCHINSON REGIONAL MEDICAL CENTER INC	0	10
+SPARKS REGIONAL MEDICAL CENTER	0	9
+ST JOHN MACOMB-OAKLAND HOSPITAL-MACOMB CENTER	0	11
+SUNRISE HOSPITAL AND MEDICAL CENTER	0	11
+OSCEOLA REGIONAL MEDICAL CENTER	0	14
+ST JOSEPH'S REGIONAL MEDICAL CENTER	0	13
+HUNTINGTON BEACH HOSPITAL	0	8
+BROADLAWNS MEDICAL CENTER	0	15
+SEBASTIAN RIVER MEDICAL CENTER	0	12
+UNIVERSITY OF ILLINOIS HOSPITAL	0	13
+MIDLAND MEMORIAL HOSPITAL	0	13
+PARIS REGIONAL MEDICAL CENTER	0	11
+JOHN H STROGER JR HOSPITAL	0	7
+SINAI-GRACE HOSPITAL	0	11
+ALTA BATES SUMMIT MEDICAL CENTER - ALTA BATES CAMP	0	6
+MERCY HOSPITAL	0	9
+BAYSHORE MEDICAL CENTER	0	15
+LA PALMA INTERCOMMUNITY HOSPITAL	0	10
+WOODHULL MEDICAL AND MENTAL HEALTH CENTER	0	8
+BAYFRONT HEALTH DADE CITY	0	11
+POMONA VALLEY HOSPITAL MEDICAL CENTER	0	11
+PALMS WEST HOSPITAL	0	13
+EMANUEL MEDICAL CENTER	0	9
+ENGLEWOOD COMMUNITY HOSPITAL	0	15
+JACKSON MEMORIAL HOSPITAL	0	12
+MISSION COMMUNITY HOSPITAL	0	10
+SOUTHERN CALIFORNIA HOSPITAL AT HOLLYWOOD	0	8
+SAN GABRIEL VALLEY MEDICAL CENTER	0	11
+REGIONAL MEDICAL CENTER OF SAN JOSE	0	11
+ROSELAND COMMUNITY HOSPITAL	0	4
+NOVANT HEALTH ROWAN MEDICAL CENTER	0	15
+COMMUNITY HOSPITAL OF LONG BEACH	0	5
+COMMUNITY HOSPITAL OF HUNTINGTON PARK	0	11
+ST JOSEPHS MEDICAL CENTER OF STOCKTON	0	12
+FOUNTAIN VALLEY REGIONAL HOSPITAL & MEDICAL CENTER	0	11
+EAST LOS ANGELES DOCTORS HOSPITAL	0	13
+HARLEM HOSPITAL CENTER	0	4
+BELLEVUE HOSPITAL CENTER	0	9
+TUBA CITY REGIONAL HEALTH CARE CORPORATION	0	7
+NASSAU UNIVERSITY MEDICAL CENTER	0	3
+KINGS COUNTY HOSPITAL CENTER	0	1
+VENICE REGIONAL MEDICAL CENTER - BAYFRONT HEALTH	0	8
+NEWARK BETH ISRAEL MEDICAL CENTER	0	12
+METROPOLITAN HOSPITAL CENTER	0	5
+EASTAR HEALTH SYSTEM	0	10
+SAMARITAN HOSPITAL	0	5
+ALBANY MEMORIAL HOSPITAL	0	9
+WELLSTAR COBB HOSPITAL	0	15
+
